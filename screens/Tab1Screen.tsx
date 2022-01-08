@@ -13,6 +13,10 @@ export const Tab1Screen = ({ navigation }: Props) => {
         title='Go to page 2'
         onPress={() => navigation.navigate('Tab2Screen')}
         />
+      <Button
+        title='Perfil'
+        onPress={() => navigation.navigate('ProfileScreen')}
+        />
     </View>
   )
 }

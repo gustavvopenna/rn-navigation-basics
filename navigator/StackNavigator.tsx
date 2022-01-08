@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Tab1Screen } from '../screens/Tab1Screen';
 import { Tab2Screen } from '../screens/Tab2Screen';
 import { Tab3Screen } from '../screens/Tab3Screen';
+import { ProfileScreen } from '../screens/ProfileScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,7 @@ export const StackNavigator = () => {
       />
       <Stack.Screen name="Tab2Screen" component={Tab2Screen} />
       <Stack.Screen name="Tab3Screen" component={Tab3Screen} />
+      <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
     </Stack.Navigator>
   );
 }
