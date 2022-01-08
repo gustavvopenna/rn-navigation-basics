@@ -9,8 +9,20 @@ const Stack = createNativeStackNavigator();
 
 export const StackNavigator = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Tab1Screen" component={Tab1Screen} />
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: 'transparent'
+        },
+        contentStyle: {
+          backgroundColor: 'white'
+        }
+      }}
+      >
+      <Stack.Screen
+        name="Tab1Screen"
+        component={Tab1Screen}
+      />
       <Stack.Screen name="Tab2Screen" component={Tab2Screen} />
       <Stack.Screen name="Tab3Screen" component={Tab3Screen} />
     </Stack.Navigator>
