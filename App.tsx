@@ -1,10 +1,10 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { StackNavigator } from './navigator/StackNavigator';
+import { BasicDrawer } from './navigator/BasicDrawer';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <StackNavigator />
+      <BasicDrawer />
     </NavigationContainer>
   );
 }
