@@ -6,7 +6,17 @@ import { Tab2Screen } from '../screens/Tab2Screen';
 import { Tab3Screen } from '../screens/Tab3Screen';
 import { ProfileScreen } from '../screens/ProfileScreen';
 
-const Stack = createNativeStackNavigator();
+export type StackRoutesParams = {
+  Tab1Screen: undefined
+  Tab2Screen: undefined
+  Tab3Screen: undefined
+  ProfileScreen: {
+    id: number,
+    name: string
+  }
+}
+
+const Stack = createNativeStackNavigator<StackRoutesParams>();
 
 export const StackNavigator = () => {
   return (
