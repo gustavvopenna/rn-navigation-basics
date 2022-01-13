@@ -2,7 +2,7 @@ import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScroll
 import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { SettingsScreen } from '../screens/SettingsScreen';
 import { styles } from '../theme/globalStyles';
-import { StackNavigator } from './StackNavigator';
+import { Tabs } from './Tabs';
 
 const Drawer = createDrawerNavigator();
 
@@ -14,7 +14,7 @@ export const MyDrawer = () => {
         headerShown: false
       }}
     >
-      <Drawer.Screen name="StackNavigator" component={StackNavigator} />
+      <Drawer.Screen name="Tabs" component={Tabs} />
       <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
     </Drawer.Navigator>
   );
@@ -33,10 +33,10 @@ const InnerDrawer = ({ navigation }: DrawerContentComponentProps) => {
       </View>
       <View style={styles.menuContainer}>
         <TouchableOpacity
-          onPress={() => navigation.navigate('StackNavigator')}
+          onPress={() => navigation.navigate('Tabs')}
           style={styles.menuButton}
         >
-          <Text style={styles.menuItem}>Navigation</Text>
+          <Text style={styles.menuItem}>Tabs</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => navigation.navigate('SettingsScreen')}

@@ -1,16 +1,15 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Button } from 'react-native';
 
-import { Tab1Screen } from '../screens/Tab1Screen';
-import { Tab2Screen } from '../screens/Tab2Screen';
-import { Tab3Screen } from '../screens/Tab3Screen';
+import { Page1Screen } from '../screens/Page1Screen';
+import { Page2Screen } from '../screens/Page2Screen';
+import { Page3Screen } from '../screens/Page3Screen';
 import { ProfileScreen } from '../screens/ProfileScreen';
 
 export type StackRoutesParams = {
-  Tab1Screen: undefined
-  Tab2Screen: undefined
-  Tab3Screen: undefined
+  Page1Screen: undefined
+  Page2Screen: undefined
+  Page3Screen: undefined
   ProfileScreen: {
     id: number,
     name: string
@@ -33,10 +32,10 @@ export const StackNavigator = () => {
       >
       <Stack.Screen
         name="Tab1Screen"
-        component={Tab1Screen}
+        component={Page1Screen}
       />
-      <Stack.Screen name="Tab2Screen" component={Tab2Screen} />
-      <Stack.Screen name="Tab3Screen" component={Tab3Screen} />
+      <Stack.Screen name="Tab2Screen" component={Page2Screen} />
+      <Stack.Screen name="Tab3Screen" component={Page3Screen} />
       <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
     </Stack.Navigator>
   );
