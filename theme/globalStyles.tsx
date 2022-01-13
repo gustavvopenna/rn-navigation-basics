@@ -1,5 +1,13 @@
 import { StyleSheet } from "react-native";
 
+export const colors = {
+  primary: '#FFA400',
+  secondary: '#009FFD',
+  tertiary: '#2A2A72',
+  darkGray: '#232528',
+  gray: '#EAF6FF'
+}
+
 export const styles = StyleSheet.create({
   title: {
     margin: 20,

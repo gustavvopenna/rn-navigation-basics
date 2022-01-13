@@ -1,7 +1,7 @@
 // import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import React, { useEffect } from 'react'
 import { Button, Text, TouchableOpacity, View } from 'react-native'
-import { styles } from '../theme/globalStyles'
+import { colors, styles } from '../theme/globalStyles'
 
 // import { StackRoutesParams } from '../navigator/StackNavigator'
 import { DrawerScreenProps } from '@react-navigation/drawer'
@@ -37,7 +37,7 @@ export const Page1Screen = ({ navigation }: Props) => {
           })}
           style={{
             ...styles.bigButton,
-            backgroundColor: '#564256'
+            backgroundColor: colors.tertiary
           }}>
           <Text style={styles.bigButtonText}>Perfil de Gustavo</Text>
         </TouchableOpacity>
@@ -48,7 +48,7 @@ export const Page1Screen = ({ navigation }: Props) => {
           })}
           style={{
             ...styles.bigButton,
-            backgroundColor: '#fc814a'
+            backgroundColor: colors.primary
           }}>
           <Text style={styles.bigButtonText}>Perfil de Mari</Text>
         </TouchableOpacity>

@@ -1,10 +1,13 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { SafeAreaView, Text, View } from 'react-native'
+import { styles } from '../theme/globalStyles'
 
 export const Tab2Screen = () => {
   return (
-    <View>
-      <Text>Tab 2</Text>
-    </View>
+    <SafeAreaView>
+      <View>
+        <Text style={styles.title}>Tab 2</Text>
+      </View>
+    </SafeAreaView>
   )
 }
