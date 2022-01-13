@@ -1,13 +1,26 @@
-import { NativeStackScreenProps } from '@react-navigation/native-stack'
-import React from 'react'
+// import { NativeStackScreenProps } from '@react-navigation/native-stack'
+import React, { useEffect } from 'react'
 import { Button, Text, TouchableOpacity, View } from 'react-native'
 import { styles } from '../theme/globalStyles'
 
-import { StackRoutesParams } from '../navigator/StackNavigator'
+// import { StackRoutesParams } from '../navigator/StackNavigator'
+import { DrawerScreenProps } from '@react-navigation/drawer'
 
-interface Props extends NativeStackScreenProps<StackRoutesParams, 'Tab1Screen'>{}
+// interface Props extends NativeStackScreenProps<StackRoutesParams, 'Tab1Screen'>{}
+interface Props extends DrawerScreenProps<any, any>{};
 
 export const Tab1Screen = ({ navigation }: Props) => {
+  useEffect(() => {
+    navigation.setOptions({
+      headerLeft: () => (
+        <Button
+          title='='
+          onPress={() => navigation.toggleDrawer()}
+        />
+      )
+    })
+  }, [])
+
   return (
     <View>
       <Text style={styles.title}>Tab1Screen</Text>

@@ -18,5 +18,20 @@ export const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     fontSize: 20
+  },
+  avatar: {
+    width: 150,
+    height: 150,
+    borderRadius: 100
+  },
+  menuContainer: {
+    margin: 25
+  },
+  menuButton: {
+    marginBottom: 20
+  },
+  menuItem: {
+    fontSize: 20,
+    fontWeight: '500'
   }
 })

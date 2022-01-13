@@ -6,7 +6,9 @@ const Drawer = createDrawerNavigator();
 
 export const BasicDrawer = () => {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator screenOptions={{
+      headerShown: false
+    }}>
       <Drawer.Screen name="StackNavigator" component={StackNavigator} />
       <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
     </Drawer.Navigator>
