@@ -1,6 +1,7 @@
 // import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import React, { useEffect } from 'react'
 import { Button, Text, TouchableOpacity, View } from 'react-native'
+import { Ionicons } from '@expo/vector-icons'
 import { colors, styles } from '../theme/globalStyles'
 
 // import { StackRoutesParams } from '../navigator/StackNavigator'
@@ -13,10 +14,11 @@ export const Page1Screen = ({ navigation }: Props) => {
   useEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
-        <Button
-          title='='
+        <TouchableOpacity
           onPress={() => navigation.toggleDrawer()}
-        />
+        >
+          <Ionicons name='menu-outline' size={30} color={colors.darkGray} />
+        </TouchableOpacity>
       )
     })
   }, [])

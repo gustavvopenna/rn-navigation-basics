@@ -1,6 +1,5 @@
 import React from 'react'
-import { Text, View } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { Text, View, SafeAreaView } from 'react-native'
 import { styles } from '../theme/globalStyles'
 
 export const Tab1Screen = () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { Platform, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { Ionicons } from '@expo/vector-icons'
 
 import { Tab1Screen } from '../screens/Tab1Screen';
 import { StackNavigator } from './StackNavigator';
@@ -27,10 +28,10 @@ const TabsAndroid = () => {
         borderTopColor: 'white',
       },
       tabBarIcon: (({ focused, color }) => {
-        let iconName: string = ''
+        let iconName: React.ReactNode | string = ''
         switch(route.name) {
           case 'Tab1Screen':
-            iconName = 'T1'
+            iconName = <Ionicons name='people' />
             break;
           case 'TopTabsNavigator':
             iconName = 'TT'
@@ -64,16 +65,16 @@ const TabsIOS = () => {
           borderTopColor: 'white',
         },
         tabBarIcon: (({ focused, color, size }) => {
-          let iconName: string = ''
+          let iconName: React.ReactNode | string = ''
           switch(route.name) {
             case 'Tab1Screen':
-              iconName = 'T1'
+              iconName = <Ionicons name='people' size={30} />
               break;
             case 'TopTabsNavigator':
-              iconName = 'TT'
+              iconName = <Ionicons name='albums-outline' size={30} />
               break;
             case 'StackNavigator':
-              iconName = 'ST'
+              iconName = <Ionicons name='file-tray-stacked-outline' size={30} />
               break;
           }
           return <Text style={{ color: focused ? colors.tertiary : colors.lightPurple }}>{iconName}</Text>
