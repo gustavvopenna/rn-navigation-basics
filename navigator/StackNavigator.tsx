@@ -31,11 +31,11 @@ export const StackNavigator = () => {
       }}
       >
       <Stack.Screen
-        name="Tab1Screen"
+        name="Page1Screen"
         component={Page1Screen}
       />
-      <Stack.Screen name="Tab2Screen" component={Page2Screen} />
-      <Stack.Screen name="Tab3Screen" component={Page3Screen} />
+      <Stack.Screen name="Page2Screen" component={Page2Screen} />
+      <Stack.Screen name="Page3Screen" component={Page3Screen} />
       <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
     </Stack.Navigator>
   );
