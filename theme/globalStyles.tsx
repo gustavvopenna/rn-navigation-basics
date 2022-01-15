@@ -37,7 +37,9 @@ export const styles = StyleSheet.create({
     margin: 25
   },
   menuButton: {
-    marginBottom: 20
+    marginBottom: 20,
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   menuItem: {
     fontSize: 20,

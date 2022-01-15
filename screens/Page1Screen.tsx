@@ -6,9 +6,10 @@ import { colors, styles } from '../theme/globalStyles'
 
 // import { StackRoutesParams } from '../navigator/StackNavigator'
 import { DrawerScreenProps } from '@react-navigation/drawer'
+import { StackRoutesParams } from '../navigator/StackNavigator'
 
 // interface Props extends NativeStackScreenProps<StackRoutesParams, 'Tab1Screen'>{}
-interface Props extends DrawerScreenProps<any, any>{};
+interface Props extends DrawerScreenProps<StackRoutesParams, any>{};
 
 export const Page1Screen = ({ navigation }: Props) => {
   useEffect(() => {
@@ -28,7 +29,7 @@ export const Page1Screen = ({ navigation }: Props) => {
       <Text style={styles.title}>Page 1</Text>
       <Button
         title='Go to page 2'
-        onPress={() => navigation.navigate('Tab2Screen')}
+        onPress={() => navigation.navigate('Page2Screen')}
         />
       <Text style={styles.title}>Navigation with params</Text>
       <View style={{ flexDirection: 'row', marginHorizontal: 10 }}>
