@@ -1,14 +1,22 @@
-import React from 'react'
-import { Text, View } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import React, { useContext } from 'react'
+import { Button, Text, View } from 'react-native'
+
 import { styles } from '../theme/globalStyles'
+import { AuthContext } from '../context/AuthContext'
 
 export const AlbumsScreen = () => {
+  const { signIn, authState } = useContext(AuthContext)
+
   return (
-    <SafeAreaView>
-      <View>
-        <Text style={styles.title}>AlbumsScreen</Text>
-      </View>
-    </SafeAreaView>
+    <View>
+      <Text style={styles.title}>AlbumsScreen</Text>
+      {
+        !authState.isLoggedIn &&
+        <Button
+          title='Sign in'
+          onPress={signIn}
+        />
+      }
+    </View>
   )
 }

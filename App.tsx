@@ -1,12 +1,13 @@
 import { NavigationContainer } from '@react-navigation/native';
+import { AuthProvider } from './context/AuthContext';
 import { MyDrawer } from './navigator/MyDrawer';
-// import { BasicDrawer } from './navigator/BasicDrawer';
 
 export default function App() {
   return (
     <NavigationContainer>
-      {/* <BasicDrawer /> */}
-      <MyDrawer />
+      <AuthProvider>
+        <MyDrawer />
+      </AuthProvider>
     </NavigationContainer>
   );
 }

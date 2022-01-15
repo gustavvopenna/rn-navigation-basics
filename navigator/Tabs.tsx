@@ -34,10 +34,10 @@ const TabsAndroid = () => {
             iconName = <Ionicons name='people' />
             break;
           case 'TopTabsNavigator':
-            iconName = 'TT'
+            iconName = <Ionicons name='albums-outline' size={30} />
             break;
           case 'StackNavigator':
-            iconName = 'ST'
+            iconName = <Ionicons name='file-tray-stacked-outline' size={30} />
             break;
         }
         return <Text style={{ color }}>{iconName}</Text>

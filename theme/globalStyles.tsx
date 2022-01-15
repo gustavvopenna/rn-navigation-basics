@@ -11,7 +11,7 @@ export const colors = {
 
 export const styles = StyleSheet.create({
   title: {
-    margin: 20,
+    marginVertical: 20,
     fontSize: 40,
     fontWeight: '700'
   },
