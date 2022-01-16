@@ -5,7 +5,7 @@ import { styles } from '../theme/globalStyles'
 import { AuthContext } from '../context/AuthContext'
 
 export const AlbumsScreen = () => {
-  const { signIn, authState } = useContext(AuthContext)
+  const { signIn, logout, authState } = useContext(AuthContext)
 
   return (
     <View>
@@ -15,6 +15,13 @@ export const AlbumsScreen = () => {
         <Button
           title='Sign in'
           onPress={signIn}
+        />
+      }
+      {
+        authState.isLoggedIn &&
+        <Button
+          title='Logout'
+          onPress={logout}
         />
       }
     </View>
